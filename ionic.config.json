@@ -1,0 +1,8 @@
+{
+  "name": "brastlewark",
+  "app_id": "27c0daa1",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}

@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Brastlewark</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)='openFilter()'>
+        <ion-icon ios="ios-funnel-outline" md="md-funnel"></ion-icon>
+      </button> 
+    </ion-buttons>
+  </ion-navbar>
+  <ion-searchbar (ionInput)="console.log($event)"></ion-searchbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list *ngIf="gnomes">
+    <button ion-item *ngFor="let gnome of gnomes" (click)="openDetailPage(gnome)">
+      <ion-avatar item-start>
+        <img [src]="gnome.thumbnail">
+      </ion-avatar>
+      <h2>{{ gnome.name }}</h2>
+    </button>    
+  </ion-list>
+</ion-content>
